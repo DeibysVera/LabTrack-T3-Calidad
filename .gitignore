@@ -1,7 +1,6 @@
 ﻿bin/
 obj/
 .vs/
-.vscode/
 TestResults/
 *.user
 *.suo
@@ -11,13 +10,10 @@ TestResults/
 *.sqlite
 *.sqlite3
 *.jtl
-*.jks
-*.pfx
-*.snk
 .env
 .env.*
 !.env.example
 **/appsettings.Development.json
 **/appsettings.Production.json
-.scannerwork/
 .sonarqube/
+.scannerwork/
