@@ -1,0 +1,2 @@
+@model List<Reserva>
+@{ViewData["Title"]="Mis reservas";}<p><a class="btn" asp-action="Crear">Nueva reserva</a></p><section class="panel"><table><thead><tr><th>Equipo</th><th>Inicio</th><th>Fin</th><th>Estado</th><th>Motivo</th></tr></thead><tbody>@foreach(var r in Model){<tr><td>@r.Equipo.Nombre</td><td>@r.FechaInicio.ToString("dd/MM/yyyy HH:mm")</td><td>@r.FechaFin.ToString("dd/MM/yyyy HH:mm")</td><td>@r.Estado</td><td>@r.MotivoRechazo</td></tr>}</tbody></table></section>

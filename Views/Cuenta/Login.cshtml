@@ -1,0 +1,3 @@
+@model LoginViewModel
+@{ViewData["Title"]="Iniciar sesión";}
+<section class="panel small"><p>Ingrese su código y contraseña para acceder al sistema.</p><form method="post" asp-action="Login"><div asp-validation-summary="All" class="error"></div><label asp-for="Codigo">Código de estudiante o administrador</label><input asp-for="Codigo" autocomplete="username"/><label asp-for="Password">Contraseña</label><input asp-for="Password" type="password" autocomplete="current-password"/><button type="submit">Ingresar</button></form><p class="muted">Usuarios de demostración: EST001 / Est12345! y ADMIN001 / Admin12345! (solo desarrollo).</p></section>

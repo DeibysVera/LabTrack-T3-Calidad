@@ -1,0 +1,3 @@
+@model ReservaViewModel
+@{ViewData["Title"]="Solicitar reserva";}
+<section class="panel small"><form method="post"><div asp-validation-summary="All" class="error"></div><label asp-for="EquipoId">Equipo</label><select asp-for="EquipoId"><option value="0">Seleccione equipo</option>@foreach(var e in (IEnumerable<Equipo>)ViewBag.Equipos){<option value="@e.Id">@e.Nombre (@e.Categoria)</option>}</select><label asp-for="FechaInicio">Fecha y hora de inicio</label><input asp-for="FechaInicio" type="datetime-local" asp-format="{0:yyyy-MM-ddTHH:mm}"/><label asp-for="FechaFin">Fecha y hora de fin</label><input asp-for="FechaFin" type="datetime-local" asp-format="{0:yyyy-MM-ddTHH:mm}"/><button type="submit">Solicitar reserva</button></form></section>
